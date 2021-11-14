@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:background="#ffffff"
-    tools:context=".LocationServiceEnabler">
+    tools:context=".NotificationEnabler">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,20 +38,12 @@
                 android:fontFamily="@font/poppinsregular"/>
 
             <ImageView
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="300dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/location"/>
+                android:src="@drawable/notification"
+                android:layout_marginBottom="50dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="20dp"
-                android:textSize="10dp"
-                android:textColor="#000000"
-                android:fontFamily="@font/poppinslight"
-                android:text="By allowing geolocation, you are\nable to explore extraado services\nin your location"/>
 
             <Button
                 android:layout_width="300dp"
@@ -59,7 +51,8 @@
                 android:background="@drawable/blue_layout"
                 android:layout_marginTop="20dp"
                 android:id="@+id/enable"
-                android:text="Enable Location"
+                android:onClick="Showpopup"
+                android:text="Enable Notifications"
                 android:textSize="10dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
@@ -84,6 +77,7 @@
                 android:text="Skip"
                 android:textSize="15dp"
                 android:textColor="#000000"
+                android:id="@+id/skip"
                 android:paddingRight="20dp"
                 android:layout_gravity="end"
                 android:fontFamily="@font/poppinslight"/>

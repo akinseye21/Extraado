@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/logobackground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Slides"></activity>
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".NotificationEnabler" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".LocationServiceEnabler">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
