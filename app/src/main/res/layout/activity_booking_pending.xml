@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".BookingPending">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:background="@drawable/plain_white_layout"
+            android:src="@drawable/ic_arrow_back"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pending"
+        android:text="PENDING"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        android:background="@drawable/gray_layout"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:fontFamily="@font/poppinslight"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00, Sat Mar. 6"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:fontFamily="@font/poppinsbold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barbers 9710"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="3dp"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#b8b7b7"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_shape"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_pin"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barbers 9710"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="96, Asokoro BLVD, \nOjota, Lagos"
+                    android:textSize="10dp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.2 Km"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppinslight"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Directions"
+                android:textAllCaps="false"
+                android:textColor="#017691"
+                android:textSize="10dp"
+                android:drawableRight="@drawable/ic_direction"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/poppinslight"
+                android:background="@drawable/white_layout2"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haircut"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppinsregular"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N1,200"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:textColor="#017691"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/user"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Funmi"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppinslight"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00 - 09:45"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#b8b7b7"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call Venue"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_phone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:text="0802 023 4567"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppinslight"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#b8b7b7"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:onClick="Showpopup"
+            android:textAllCaps="false"
+            android:text="Cancel"
+            android:textSize="12dp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppinslight"
+            android:background="@drawable/plain_white_layout"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Change"
+            android:textSize="12dp"
+            android:layout_margin="5dp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/poppinslight"
+            android:background="@drawable/black_layout"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

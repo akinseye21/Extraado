@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +35,9 @@ public class Slides extends AppCompatActivity {
             R.drawable.searchservice,
             R.drawable.bookservices};
 
+    TextView skip,next;
+    Button getStarted;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +51,39 @@ public class Slides extends AppCompatActivity {
         mSlideViewPager.setAdapter(sliderAdapter);
 
         info = findViewById(R.id.info);
+        skip = findViewById(R.id.skip);
+        next = findViewById(R.id.next);
+        getStarted = findViewById(R.id.getStarted);
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getStarted.setVisibility(View.VISIBLE);
+                next.setVisibility(View.GONE);
+                skip.setVisibility(View.GONE);
+                mDotLayout.setVisibility(View.GONE);
+                info.setVisibility(View.GONE);
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getStarted.setVisibility(View.VISIBLE);
+                next.setVisibility(View.GONE);
+                skip.setVisibility(View.GONE);
+                mDotLayout.setVisibility(View.GONE);
+                info.setVisibility(View.GONE);
+            }
+        });
+
+        getStarted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Slides.this, SignIn.class);
+                startActivity(i);
+            }
+        });
 
         //adding timer for the images
         TimerTask timerTask = new TimerTask() {

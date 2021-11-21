@@ -9,7 +9,12 @@
         android:roundIcon="@drawable/logobackground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Slides"></activity>
+        <activity android:name=".BookingPending"></activity>
+        <activity android:name=".Dashboard" />
+        <activity android:name=".TermsOfUse" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".Slides" />
         <activity android:name=".SplashScreen" />
         <activity android:name=".NotificationEnabler" />
         <activity android:name=".MainActivity" />
