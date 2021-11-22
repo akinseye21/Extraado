@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!--
+                Add menu items here
+                Menu items with icon and Title
+        -->
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/item_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/reviews"
+            android:icon="@drawable/item_star"
+            android:title="Reviews" />
+        <item
+            android:id="@+id/payments"
+            android:icon="@drawable/item_payment"
+            android:title="Payments" />
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/item_notification"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/item_setting"
+            android:title="Settings" />
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/item_privacy"
+            android:title="Privacy" />
+    </group>
+</menu>

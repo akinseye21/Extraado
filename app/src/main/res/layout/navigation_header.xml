@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:background="@drawable/plain_white_layout"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/baber"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/shapedImage"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="James Maddison"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joined 3rd of Jan. 2019"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppinslight"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

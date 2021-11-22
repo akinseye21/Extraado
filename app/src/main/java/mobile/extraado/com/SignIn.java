@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class SignIn extends AppCompatActivity {
 
-    TextView signup;
+    TextView signup, forgotPassword;
     Button btn_signin;
 
     @Override
@@ -25,6 +25,15 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SignIn.this, SignUp.class);
+                startActivity(i);
+            }
+        });
+
+        forgotPassword = findViewById(R.id.forgotPassword);
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignIn.this, ResetPassword.class);
                 startActivity(i);
             }
         });

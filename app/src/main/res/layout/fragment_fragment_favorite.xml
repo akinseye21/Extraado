@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:orientation="vertical"
-                android:background="@drawable/gray_layout">
+                android:background="@drawable/gray_layout_light">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_height="120dp"
@@ -189,7 +189,7 @@
                 android:layout_height="200dp"
                 android:orientation="vertical"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/gray_layout">
+                android:background="@drawable/gray_layout_light">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_height="120dp"
@@ -324,7 +324,7 @@
                 android:orientation="vertical"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/gray_layout">
+                android:background="@drawable/gray_layout_light">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_height="120dp"

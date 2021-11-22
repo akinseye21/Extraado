@@ -17,4 +17,9 @@
         <item name="cornerSize">20dp</item>
     </style>
 
+    <style name="poppings_item" parent="android:Widget.TextView">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/poppinsregular</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
 </resources>

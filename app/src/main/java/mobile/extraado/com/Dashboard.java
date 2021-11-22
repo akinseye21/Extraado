@@ -1,20 +1,39 @@
 package mobile.extraado.com;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class Dashboard extends AppCompatActivity implements
         FragmentExplore.OnFragmentInteractionListener,
         FragmentFavorite.OnFragmentInteractionListener,
-        FragmentBooking.OnFragmentInteractionListener{
+        FragmentBooking.OnFragmentInteractionListener,
+        SearchPage.OnFragmentInteractionListener{
+
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView navigationView;
+
+    ImageView openMenu;
+
 
     private TabLayout tab;
     private ViewPager viewpager;
@@ -29,6 +48,53 @@ public class Dashboard extends AppCompatActivity implements
 
         viewpager = findViewById(R.id.viewpager);
         tab = findViewById(R.id.tabLayout);
+
+//        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//        tab.setLayoutParams(params);
+
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
+        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        navigationView = findViewById(R.id.navigation);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+
+                if(id == R.id.profile){
+                    Toast.makeText(Dashboard.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.reviews){
+                    Toast.makeText(Dashboard.this, "Reviews Selected", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.payments){
+                    Toast.makeText(Dashboard.this, "Payments Selected", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.notifications){
+                    Toast.makeText(Dashboard.this, "Notifications Selected", Toast.LENGTH_SHORT).show();
+                }
+               else  if(id == R.id.settings){
+                    Toast.makeText(Dashboard.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.privacy){
+                    Toast.makeText(Dashboard.this, "Privacy Selected", Toast.LENGTH_SHORT).show();
+                }
+
+
+                return true;
+            }
+        });
+
+        openMenu = findViewById(R.id.open_nav);
+        openMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(viewPagerAdapter);
@@ -59,6 +125,11 @@ public class Dashboard extends AppCompatActivity implements
 
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return actionBarDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     @Override

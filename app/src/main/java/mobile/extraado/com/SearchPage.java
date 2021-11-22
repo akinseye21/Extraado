@@ -1,35 +1,25 @@
 package mobile.extraado.com;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.LinearLayout.LayoutParams;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FragmentExplore.OnFragmentInteractionListener} interface
+ * {@link SearchPage.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FragmentExplore#newInstance} factory method to
+ * Use the {@link SearchPage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentExplore extends Fragment {
+public class SearchPage extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -41,15 +31,7 @@ public class FragmentExplore extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    ImageView imgView;
-    LinearLayout exploreSearch;
-    RelativeLayout searchRel;
-    HorizontalScrollView hsv;
-    LinearLayout realsearch;
-    ScrollView scrollView;
-    LinearLayout myLinLay;
-
-    public FragmentExplore() {
+    public SearchPage() {
         // Required empty public constructor
     }
 
@@ -59,11 +41,11 @@ public class FragmentExplore extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentExplore.
+     * @return A new instance of fragment SearchPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentExplore newInstance(String param1, String param2) {
-        FragmentExplore fragment = new FragmentExplore();
+    public static SearchPage newInstance(String param1, String param2) {
+        SearchPage fragment = new SearchPage();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -80,51 +62,11 @@ public class FragmentExplore extends Fragment {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_fragment_explore, container, false);
-
-        searchRel = v.findViewById(R.id.searchrel);
-        hsv = v.findViewById(R.id.hsv);
-        realsearch = v.findViewById(R.id.realSearch);
-        myLinLay = v.findViewById(R.id.myLinLayout);
-
-        //access views in root activity
-        final View topMenu = getActivity().findViewById(R.id.rel1);
-
-
-        exploreSearch = v.findViewById(R.id.explore_search);
-        exploreSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //converting root activity views
-                if( topMenu instanceof RelativeLayout) {
-                    RelativeLayout rel1 = (RelativeLayout) topMenu;
-//                    rel1.setVisibility(View.GONE);
-                }
-
-                // Create new fragment and transaction
-                Fragment newFragment = new SearchPage();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                // Replace whatever is in the old fragment view with this fragment,
-                // and add the transaction to the back stack if needed
-                transaction.replace(R.id.fragmentExp, newFragment);
-                transaction.addToBackStack(null);
-                // Commit the transaction
-                transaction.commit();
-
-//                searchRel.setVisibility(View.GONE);
-//                hsv.setVisibility(View.GONE);
-//                realsearch.setVisibility(View.VISIBLE);
-//                myLinLay.setVisibility(View.GONE);
-            }
-        });
-
-        return v;
+        return inflater.inflate(R.layout.fragment_search_page, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

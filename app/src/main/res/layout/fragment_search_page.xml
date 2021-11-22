@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SearchPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:id="@+id/realSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gray_layout_light2"
+                android:text="X"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_search"
+                android:hint="Search for services..."
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppinslight"
+                android:background="@drawable/search_layout"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:visibility="invisible"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gray_layout_light2"
+                android:text="X"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/location"
+                    android:textSize="10dp"
+                    android:hint="Ojota, Lagos"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/search_layout"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/location"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10dp"
+                    android:hint="when?"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/search_layout"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
