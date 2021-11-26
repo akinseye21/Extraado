@@ -64,9 +64,11 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
+
             <RelativeLayout
                 android:layout_width="80dp"
                 android:layout_height="100dp"
+                android:id="@+id/all"
                 android:background="@drawable/blue_layout">
                 <ImageView
                     android:layout_width="15dp"
@@ -77,6 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/alltext"
                     android:text="All"
                     android:textSize="10dp"
                     android:textColor="#ffffff"
@@ -92,6 +95,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:id="@+id/hairsalon"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
                     android:layout_width="15dp"
@@ -102,6 +106,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/hairsalontext"
                     android:text="Hair Salon"
                     android:textSize="10dp"
                     android:textColor="#000000"
@@ -116,20 +121,22 @@
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
+                android:id="@+id/barber"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:id="@+id/barber"
+                    android:id="@+id/barber5"
                     android:layout_centerInParent="true"
                     android:src="@drawable/barber"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/barbertext"
                     android:text="Barber"
                     android:textSize="10dp"
                     android:textColor="#000000"
-                    android:layout_below="@+id/barber"
+                    android:layout_below="@+id/barber5"
                     android:layout_centerHorizontal="true"
                     android:paddingTop="10dp"
                     android:fontFamily="@font/poppinslight"/>
@@ -139,6 +146,7 @@
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
+                android:id="@+id/nailsalon"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
                     android:layout_width="15dp"
@@ -149,6 +157,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/nailsalontext"
                     android:text="Nail Salon"
                     android:textSize="10dp"
                     android:textColor="#000000"
@@ -163,20 +172,22 @@
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
+                android:id="@+id/salon2"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:id="@+id/salon2"
+                    android:id="@+id/salon7"
                     android:layout_centerInParent="true"
                     android:src="@drawable/salon"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/salon2text"
                     android:text="Salon 2"
                     android:textSize="10dp"
                     android:textColor="#000000"
-                    android:layout_below="@+id/salon2"
+                    android:layout_below="@+id/salon7"
                     android:layout_centerHorizontal="true"
                     android:paddingTop="10dp"
                     android:fontFamily="@font/poppinslight"/>
@@ -186,6 +197,7 @@
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="5dp"
+                android:id="@+id/barber22"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
                     android:layout_width="15dp"
@@ -196,6 +208,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/barber22text"
                     android:text="Barber"
                     android:textSize="10dp"
                     android:textColor="#000000"
@@ -240,6 +253,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="vertical"
+                    android:id="@+id/cardClick1"
                     android:background="@drawable/gray_layout_light">
 
                     <com.google.android.material.imageview.ShapeableImageView

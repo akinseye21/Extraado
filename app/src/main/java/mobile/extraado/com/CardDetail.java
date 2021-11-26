@@ -1,29 +1,32 @@
 package mobile.extraado.com;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.google.android.material.tabs.TabLayout;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link SearchPage.OnFragmentInteractionListener} interface
+ * {@link CardDetail.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link SearchPage#newInstance} factory method to
+ * Use the {@link CardDetail#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SearchPage extends Fragment {
+public class CardDetail extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,10 +38,11 @@ public class SearchPage extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    RelativeLayout cardClick;
-    Button back;
+    private TabLayout tab;
+    private ViewPager viewpager;
+    ViewPagerAdapter2 viewPagerAdapter2;
 
-    public SearchPage() {
+    public CardDetail() {
         // Required empty public constructor
     }
 
@@ -48,11 +52,11 @@ public class SearchPage extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SearchPage.
+     * @return A new instance of fragment CardDetail.
      */
     // TODO: Rename and change types and number of parameters
-    public static SearchPage newInstance(String param1, String param2) {
-        SearchPage fragment = new SearchPage();
+    public static CardDetail newInstance(String param1, String param2) {
+        CardDetail fragment = new CardDetail();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +67,6 @@ public class SearchPage extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -74,45 +77,20 @@ public class SearchPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_search_page, container, false);
+        View v = inflater.inflate(R.layout.fragment_card_detail, container, false);
 
-        back = v.findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create new fragment and transaction
-                Fragment newFragment = new FragmentExplore();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                // Replace whatever is in the old fragment view with this fragment,
-                // and add the transaction to the back stack if needed
-                transaction.replace(R.id.framelayout, newFragment);
-                transaction.addToBackStack(null);
-                // Commit the transaction
-                transaction.commit();
-            }
-        });
+        final View topMenu = getActivity().findViewById(R.id.rel1);
 
-        cardClick = v.findViewById(R.id.cardClick);
-        cardClick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create new fragment and transaction
-                Fragment newFragment = new CardDetail();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                // Replace whatever is in the old fragment view with this fragment,
-                // and add the transaction to the back stack if needed
-                transaction.replace(R.id.framelayout, newFragment);
-                transaction.addToBackStack(null);
-                // Commit the transaction
-                transaction.commit();
-            }
-        });
+        viewpager = v.findViewById(R.id.viewpager);
+        tab = v.findViewById(R.id.tabLayout);
 
+        viewPagerAdapter2 = new ViewPagerAdapter2(getChildFragmentManager());
+        viewpager.setAdapter(viewPagerAdapter2);
+
+        tab.setupWithViewPager(viewpager);
 
         return v;
-
     }
-
 
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -153,6 +131,4 @@ public class SearchPage extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
 }

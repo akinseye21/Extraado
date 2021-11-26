@@ -26,7 +26,12 @@ public class Dashboard extends AppCompatActivity implements
         FragmentExplore.OnFragmentInteractionListener,
         FragmentFavorite.OnFragmentInteractionListener,
         FragmentBooking.OnFragmentInteractionListener,
-        SearchPage.OnFragmentInteractionListener{
+        SearchPage.OnFragmentInteractionListener,
+        CardDetail.OnFragmentInteractionListener,
+        Details.OnFragmentInteractionListener,
+        Services.OnFragmentInteractionListener,
+        Reviews.OnFragmentInteractionListener,
+        Map.OnFragmentInteractionListener{
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -134,7 +139,11 @@ public class Dashboard extends AppCompatActivity implements
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+    }
 
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
     }
 
 //    private void addTabs2(ViewPager viewpager2) {

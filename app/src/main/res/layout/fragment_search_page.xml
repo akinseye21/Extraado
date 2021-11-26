@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/framelayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     tools:context=".SearchPage">
 
@@ -23,6 +25,7 @@
             <Button
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:id="@+id/back"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/gray_layout_light2"
                 android:text="X"/>
@@ -77,7 +80,613 @@
             </RelativeLayout>
         </LinearLayout>
 
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none"
+            android:id="@+id/hsv"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:id="@+id/innerLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textSize="10dp"
+                    android:textColor="#017691"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hair Salon"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barber"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nail Salon"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Massage"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dentist"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barber"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hair Salon"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/picall"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppinslight"/>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000000"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/myLinLayout">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroll"
+            android:layout_marginBottom="70dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Result (790)"
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/poppinslight" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_pin"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Map"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinslight" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/gray_layout_light2"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/menu"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Filters"
+                            android:textSize="10dp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:id="@+id/cardClick"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="10dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:id="@+id/cardClick2"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="10dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:id="@+id/cardClick2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="10dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="12dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
 
 
 </FrameLayout>

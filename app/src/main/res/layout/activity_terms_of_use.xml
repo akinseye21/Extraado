@@ -22,6 +22,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/back"
                 android:padding="10dp"
                 android:background="@drawable/plain_white_layout">
                 <ImageView
@@ -64,6 +65,7 @@ B. No Joint Venture, No Derogation of Rights. You agree that no joint venture, p
                     <Button
                         android:layout_width="150dp"
                         android:layout_height="60dp"
+                        android:id="@+id/cancel"
                         android:text="Cancel"
                         android:textColor="#017691"
                         android:textAllCaps="false"

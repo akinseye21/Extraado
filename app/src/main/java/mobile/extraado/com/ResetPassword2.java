@@ -6,28 +6,47 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class SignUp extends AppCompatActivity {
+public class ResetPassword2 extends AppCompatActivity {
 
     LinearLayout back;
-    Button btn_signup;
+    TextView emailLink;
     TextView signin;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_reset_password2);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        Intent i = getIntent();
+        email = i.getStringExtra("email");
 
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), SignIn.class);
+                Intent i = new Intent(ResetPassword2.this, ResetPassword.class);
                 startActivity(i);
+            }
+        });
+
+        emailLink = findViewById(R.id.email_link);
+        emailLink.setText(email);
+        emailLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_APP_EMAIL);
+                    startActivity(intent);
+                } catch (android.content.ActivityNotFoundException e) {
+                    Toast.makeText(ResetPassword2.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -35,17 +54,7 @@ public class SignUp extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), SignIn.class);
-                startActivity(i);
-            }
-        });
-
-
-        btn_signup = findViewById(R.id.btn_signup);
-        btn_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SignUp.this, TermsOfUse.class);
+                Intent i = new Intent(ResetPassword2.this, SignIn.class);
                 startActivity(i);
             }
         });

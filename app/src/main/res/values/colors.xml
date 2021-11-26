@@ -5,4 +5,5 @@
     <color name="colorAccent">#ffffff</color>
     <color name="colorScroll">#017691</color>
     <color name="colorYellow">#ffb320</color>
+    <color name="colorGray">#b8b7b7</color>
 </resources>
