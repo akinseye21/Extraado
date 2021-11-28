@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class NotificationEnabler extends AppCompatActivity {
 
     Dialog myDialog;
@@ -37,6 +39,7 @@ public class NotificationEnabler extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NotificationEnabler.this, SplashScreen.class);
                 startActivity(intent);
+                Animatoo.animateSplit(NotificationEnabler.this);
             }
         });
 
@@ -46,6 +49,7 @@ public class NotificationEnabler extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NotificationEnabler.this, SplashScreen.class);
                 startActivity(intent);
+                Animatoo.animateSplit(NotificationEnabler.this);
             }
         });
 
@@ -67,6 +71,7 @@ public class NotificationEnabler extends AppCompatActivity {
 
                 Intent i = new Intent(NotificationEnabler.this, SplashScreen.class);
                 startActivity(i);
+                Animatoo.animateSplit(NotificationEnabler.this);
             }
         });
 
@@ -96,6 +101,7 @@ public class NotificationEnabler extends AppCompatActivity {
 
                     Intent i = new Intent(NotificationEnabler.this, SplashScreen.class);
                     startActivity(i);
+                    Animatoo.animateSplit(NotificationEnabler.this);
                 }  else {
                     // Explain to the user that the feature is unavailable because
                     // the features requires a permission that the user has denied.
@@ -107,6 +113,7 @@ public class NotificationEnabler extends AppCompatActivity {
 
                     Intent i = new Intent(NotificationEnabler.this, SplashScreen.class);
                     startActivity(i);
+                    Animatoo.animateSplit(NotificationEnabler.this);
                 }
                 return;
         }

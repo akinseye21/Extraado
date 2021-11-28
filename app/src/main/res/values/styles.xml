@@ -6,10 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="android:windowActivityTransitions" tools:ignore="NewApi">true</item>
     </style>
 
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/poppinsregular</item>
+        <item name="android:textSize">8dp</item>
     </style>
 
     <style name="tab_text2" parent="@android:style/TextAppearance.Widget.TabWidget">
@@ -26,5 +29,7 @@
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/poppinsregular</item>
         <item name="android:textSize">12dp</item>
     </style>
+
+
 
 </resources>

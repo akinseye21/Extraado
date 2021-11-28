@@ -43,7 +43,7 @@
                 android:text="Sign in to"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsbold"/>
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="extraado"
                 android:textColor="#017691"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppinsbold"/>
@@ -63,7 +63,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Email"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:textColorHint="#7c7c7c"
                 android:textColor="#7c7c7c"
                 android:fontFamily="@font/poppinslight"
@@ -76,7 +76,7 @@
                 android:layout_marginRight="10dp"
                 android:inputType="textPassword"
                 android:hint="Password"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:textColorHint="#7c7c7c"
                 android:textColor="#7c7c7c"
                 android:fontFamily="@font/poppinslight"
@@ -88,7 +88,7 @@
                 android:id="@+id/forgotPassword"
                 android:text="Forgot password?"
                 android:textColor="#017691"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="end"
@@ -103,9 +103,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/btn_signin"
+                android:stateListAnimator="@null"
                 android:text="Sign in"
                 android:textStyle="bold"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>
@@ -122,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:text="Don't have an account?"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:fontFamily="@font/poppinsregular"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,7 +132,7 @@
                     android:id="@+id/signup"
                     android:text="Sign up"
                     android:textColor="#ff3a2a"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:fontFamily="@font/poppinsregular"/>
 
             </LinearLayout>
@@ -155,7 +156,7 @@
                     android:id="@+id/tx"
                     android:text="Or sign in with"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:fontFamily="@font/poppinsregular"
                     android:paddingRight="10dp"
                     android:paddingLeft="10dp"
@@ -183,15 +184,15 @@
                     android:gravity="center"
                     android:background="@drawable/facebook_layout">
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:src="@drawable/facebook"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Facebook"
                         android:textColor="#ffffff"
-                        android:textSize="12dp"
+                        android:textSize="8dp"
                         android:fontFamily="@font/poppinsregular"
                         android:paddingRight="10dp"
                         android:paddingLeft="10dp"
@@ -207,15 +208,15 @@
                     android:gravity="center"
                     android:background="@drawable/plain_white_layout">
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:src="@drawable/google"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Google"
                         android:textColor="#000000"
-                        android:textSize="12dp"
+                        android:textSize="8dp"
                         android:fontFamily="@font/poppinsregular"
                         android:paddingRight="10dp"
                         android:paddingLeft="10dp"

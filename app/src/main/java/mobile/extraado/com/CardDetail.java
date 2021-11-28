@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -41,6 +42,8 @@ public class CardDetail extends Fragment {
     private TabLayout tab;
     private ViewPager viewpager;
     ViewPagerAdapter2 viewPagerAdapter2;
+
+    LinearLayout back;
 
     public CardDetail() {
         // Required empty public constructor
@@ -83,6 +86,13 @@ public class CardDetail extends Fragment {
 
         viewpager = v.findViewById(R.id.viewpager);
         tab = v.findViewById(R.id.tabLayout);
+        back = v.findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         viewPagerAdapter2 = new ViewPagerAdapter2(getChildFragmentManager());
         viewpager.setAdapter(viewPagerAdapter2);

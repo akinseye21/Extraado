@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/seeMore"
                 android:fontFamily="@font/poppinslight"
-                android:textSize="10dp"/>
+                android:textSize="8dp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                     android:layout_centerVertical="true"
                     android:text="Contact"
                     android:textStyle="bold"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textColor="#000000"
                     android:fontFamily="@font/poppinsregular"/>
 
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:text="0802 032 7823"
                         android:textStyle="bold"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textColor="#000000"
                         android:fontFamily="@font/poppinsregular"/>
 
@@ -84,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:text="0802 032 7823"
                         android:textStyle="bold"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textColor="#000000"
                         android:fontFamily="@font/poppinsregular"/>
 

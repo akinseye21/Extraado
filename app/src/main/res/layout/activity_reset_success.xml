@@ -36,7 +36,7 @@
                 android:text="Success!"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:layout_marginTop="120dp"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsregular"/>
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your account password has been reset \nsuccessfully. Sign in now."
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsbold"/>
 
@@ -61,9 +61,10 @@
                 android:layout_marginBottom="50dp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/reset"
+                android:stateListAnimator="@null"
                 android:text="Sign in"
                 android:textStyle="bold"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>

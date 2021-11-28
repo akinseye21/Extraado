@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class ResetPassword2 extends AppCompatActivity {
 
     LinearLayout back;
@@ -32,6 +34,7 @@ public class ResetPassword2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ResetPassword2.this, ResetPassword.class);
                 startActivity(i);
+                Animatoo.animateSlideRight(ResetPassword2.this);
             }
         });
 
@@ -56,6 +59,7 @@ public class ResetPassword2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ResetPassword2.this, SignIn.class);
                 startActivity(i);
+                Animatoo.animateSplit(ResetPassword2.this);
             }
         });
     }

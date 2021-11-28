@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -82,6 +84,7 @@ public class Slides extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Slides.this, SignIn.class);
                 startActivity(i);
+                Animatoo.animateSplit(Slides.this);
             }
         });
 

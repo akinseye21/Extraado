@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SplashScreen extends AppCompatActivity {
 
     protected static final int Timer_Runtime=3000;
@@ -55,6 +57,7 @@ public class SplashScreen extends AppCompatActivity {
     public void onContinue(){
         Intent i = new Intent(this, Slides.class);
         startActivity(i);
+        Animatoo.animateSplit(SplashScreen.this);
 
     }
 

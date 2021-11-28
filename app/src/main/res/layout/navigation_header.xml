@@ -51,7 +51,7 @@
             android:text="James Maddison"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:textStyle="bold"
             android:textColor="#000000"
             android:fontFamily="@font/poppinsregular"/>
@@ -62,7 +62,7 @@
             android:text="Joined 3rd of Jan. 2019"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:textSize="10dp"
+            android:textSize="8dp"
             android:textColor="#000000"
             android:fontFamily="@font/poppinslight"/>
 

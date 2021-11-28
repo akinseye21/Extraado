@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SignIn extends AppCompatActivity {
 
     LinearLayout back;
@@ -37,6 +39,7 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SignIn.this, SignUp.class);
                 startActivity(i);
+                Animatoo.animateSplit(SignIn.this);
             }
         });
 
@@ -46,6 +49,7 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SignIn.this, ResetPassword.class);
                 startActivity(i);
+                Animatoo.animateSplit(SignIn.this);
             }
         });
 
@@ -55,6 +59,7 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SignIn.this, TermsOfUse.class);
                 startActivity(i);
+                Animatoo.animateSplit(SignIn.this);
             }
         });
     }

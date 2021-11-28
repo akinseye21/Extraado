@@ -28,14 +28,15 @@
                 android:id="@+id/back"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/gray_layout_light2"
-                android:text="X"/>
+                android:text="X"
+                android:textSize="10dp"/>
 
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:drawableRight="@drawable/ic_search"
                 android:hint="Search for services..."
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#000000"
                 android:fontFamily="@font/poppinslight"
                 android:background="@drawable/search_layout"/>
@@ -63,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:id="@+id/location"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:hint="Ojota, Lagos"
                     android:fontFamily="@font/poppinslight"
                     android:background="@drawable/search_layout"/>
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/location"
                     android:layout_marginLeft="5dp"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:hint="when?"
                     android:fontFamily="@font/poppinslight"
                     android:background="@drawable/search_layout"/>
@@ -100,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="All"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textColor="#017691"
                     android:layout_below="@+id/picall"
                     android:layout_centerHorizontal="true"
@@ -110,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hair Salon"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -121,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Barber"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -132,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nail Salon"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -143,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Massage"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -154,7 +155,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dentist"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -165,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Barber"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -176,7 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hair Salon"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_below="@+id/picall"
@@ -218,13 +219,13 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Result (790)"
-                        android:textSize="15dp"
+                        android:textSize="10dp"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
@@ -245,7 +246,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Map"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:layout_centerVertical="true"
                             android:layout_centerInParent="true"
@@ -272,7 +273,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Filters"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"/>
                     </LinearLayout>
                 </RelativeLayout>
@@ -307,7 +308,7 @@
                             android:text="Open (Closes at 10pm)"
                             android:background="@drawable/plain_white_layout"
                             android:layout_alignParentLeft="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinslight"
                             android:paddingLeft="10dp"
@@ -335,7 +336,7 @@
                             android:text="Fantasia Place"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsbold"/>
                         <ImageView
@@ -353,7 +354,7 @@
                             android:layout_toLeftOf="@+id/star"
                             android:layout_marginRight="10dp"
                             android:id="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -362,7 +363,7 @@
                             android:text="(24)"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 
@@ -381,7 +382,7 @@
                             android:drawableLeft="@drawable/ic_pin"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -390,7 +391,7 @@
                             android:id="@+id/price"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -399,7 +400,7 @@
                             android:text="from"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/price"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 
@@ -442,7 +443,7 @@
                             android:text="Open (Closes at 10pm)"
                             android:background="@drawable/plain_white_layout"
                             android:layout_alignParentLeft="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinslight"
                             android:paddingLeft="10dp"
@@ -470,7 +471,7 @@
                             android:text="Fantasia Place"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsbold"/>
                         <ImageView
@@ -488,7 +489,7 @@
                             android:layout_toLeftOf="@+id/star"
                             android:layout_marginRight="10dp"
                             android:id="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -497,7 +498,7 @@
                             android:text="(24)"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 
@@ -516,7 +517,7 @@
                             android:drawableLeft="@drawable/ic_pin"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -525,7 +526,7 @@
                             android:id="@+id/price"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -534,7 +535,7 @@
                             android:text="from"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/price"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 
@@ -578,7 +579,7 @@
                             android:text="Open (Closes at 10pm)"
                             android:background="@drawable/plain_white_layout"
                             android:layout_alignParentLeft="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinslight"
                             android:paddingLeft="10dp"
@@ -606,7 +607,7 @@
                             android:text="Fantasia Place"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsbold"/>
                         <ImageView
@@ -624,7 +625,7 @@
                             android:layout_toLeftOf="@+id/star"
                             android:layout_marginRight="10dp"
                             android:id="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -633,7 +634,7 @@
                             android:text="(24)"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/rating"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 
@@ -652,7 +653,7 @@
                             android:drawableLeft="@drawable/ic_pin"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -661,7 +662,7 @@
                             android:id="@+id/price"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:textSize="12dp"
+                            android:textSize="8dp"
                             android:textColor="#000000"
                             android:fontFamily="@font/poppinsregular"/>
                         <TextView
@@ -670,7 +671,7 @@
                             android:text="from"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/price"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsregular"/>
                     </RelativeLayout>
 

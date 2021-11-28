@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class MainActivity extends AppCompatActivity {
 
     Button women, men, unisex;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NotificationEnabler.class);
                 startActivity(i);
+                Animatoo.animateSplit(MainActivity.this);
             }
         });
 
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NotificationEnabler.class);
                 startActivity(i);
+                Animatoo.animateSplit(MainActivity.this);
             }
         });
 
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NotificationEnabler.class);
                 startActivity(i);
+                Animatoo.animateSplit(MainActivity.this);
             }
         });
 

@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class LocationServiceEnabler extends AppCompatActivity {
 
     Button notnow, enable;
@@ -30,6 +32,7 @@ public class LocationServiceEnabler extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(LocationServiceEnabler.this, MainActivity.class);
                 startActivity(i);
+                Animatoo.animateSplit(LocationServiceEnabler.this);
             }
         });
         notnow = findViewById(R.id.notnow);
@@ -38,6 +41,7 @@ public class LocationServiceEnabler extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(LocationServiceEnabler.this, MainActivity.class);
                 startActivity(i);
+                Animatoo.animateSplit(LocationServiceEnabler.this);
             }
         });
 
@@ -68,6 +72,7 @@ public class LocationServiceEnabler extends AppCompatActivity {
 
                 Intent i = new Intent(LocationServiceEnabler.this, MainActivity.class);
                 startActivity(i);
+                Animatoo.animateSplit(LocationServiceEnabler.this);
             }
         } else {
             System.out.println(permission+" is already granted");
@@ -75,6 +80,7 @@ public class LocationServiceEnabler extends AppCompatActivity {
 
             Intent i = new Intent(LocationServiceEnabler.this, MainActivity.class);
             startActivity(i);
+            Animatoo.animateSplit(LocationServiceEnabler.this);
         }
     }
 

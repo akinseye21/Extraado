@@ -32,7 +32,7 @@
                 android:text="Enable Location Services"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppinsregular"/>
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#000000"
                 android:fontFamily="@font/poppinslight"
                 android:text="By allowing geolocation, you are\nable to explore extraado services\nin your location"/>
@@ -58,9 +58,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/blue_layout"
                 android:layout_marginTop="20dp"
+                android:stateListAnimator="@null"
                 android:id="@+id/enable"
                 android:text="Enable Location"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>
@@ -70,10 +71,11 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/white_layout"
                 android:layout_marginTop="5dp"
+                android:stateListAnimator="@null"
                 android:layout_marginBottom="10dp"
                 android:id="@+id/notnow"
                 android:text="Not Now"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#017691"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>
@@ -83,8 +85,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/skip"
                 android:text="Skip"
-                android:textSize="15dp"
+                android:textSize="8dp"
                 android:textColor="#000000"
+                android:paddingTop="10dp"
                 android:paddingRight="20dp"
                 android:layout_gravity="end"
                 android:fontFamily="@font/poppinslight"/>

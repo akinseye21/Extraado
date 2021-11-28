@@ -27,6 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:id="@+id/back"
                     android:background="@drawable/plain_white_layout">
                     <ImageView
                         android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Open "
-                        android:textSize="12dp"
+                        android:textSize="8dp"
                         android:textColor="#ffffff"
                         android:textStyle="bold"
                         android:fontFamily="@font/poppinsregular" />
@@ -67,7 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="(Closes at 10pm) "
-                        android:textSize="12dp"
+                        android:textSize="8dp"
                         android:textColor="#ffffff"
                         android:fontFamily="@font/poppinsregular" />
 
@@ -92,14 +93,14 @@
                     android:layout_height="wrap_content"
                     android:text="Fantasia Place"
                     android:textColor="#000000"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:fontFamily="@font/poppinsmedium"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Yaba left, Lagos Street"
                     android:textColor="#000000"
-                    android:textSize="12dp"
+                    android:textSize="8dp"
                     android:fontFamily="@font/poppinslight"/>
 
             </LinearLayout>
@@ -115,13 +116,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:text="4.5"
-                    android:textSize="12dp"
+                    android:textSize="10dp"
                     android:fontFamily="@font/poppinsmedium"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="24 Reviews"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:fontFamily="@font/poppinslight"/>
 
             </LinearLayout>

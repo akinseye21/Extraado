@@ -32,7 +32,7 @@
                 android:text="Select services for:"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="12dp"
+                android:textSize="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppinsregular"/>
@@ -50,8 +50,9 @@
                 android:background="@drawable/blue_layout"
                 android:layout_marginTop="20dp"
                 android:id="@+id/women"
+                android:stateListAnimator="@null"
                 android:text="Women"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>
@@ -62,8 +63,9 @@
                 android:background="@drawable/black_layout"
                 android:layout_marginTop="5dp"
                 android:id="@+id/men"
+                android:stateListAnimator="@null"
                 android:text="Men"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>
@@ -74,9 +76,10 @@
                 android:background="@drawable/gray_layout"
                 android:layout_marginTop="5dp"
                 android:id="@+id/unisex"
+                android:stateListAnimator="@null"
                 android:layout_marginBottom="10dp"
                 android:text="Unisex"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#000000"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>

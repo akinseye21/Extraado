@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000"
+    android:background="#ae000000"
     tools:context=".BookingPage">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#000000"/>
+        android:background="#00000000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:text="Book a Service"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsregular"/>
@@ -41,7 +41,9 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:textSize="12dp"
+                android:id="@+id/closePage"
+                android:textSize="8dp"
+                android:stateListAnimator="@null"
                 android:background="@drawable/plain_white_layout"
                 android:text="X"/>
 
@@ -60,7 +62,7 @@
                 android:text="Fantasia Place"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginLeft="10dp"
                 android:layout_alignParentLeft="true"
                 android:fontFamily="@font/poppinslight"/>
@@ -76,7 +78,7 @@
                     android:layout_centerVertical="true"
                     android:text="4.5"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_alignParentLeft="true"
                     android:fontFamily="@font/poppinslight"/>
                 <ImageView
@@ -93,7 +95,7 @@
                 android:layout_centerVertical="true"
                 android:text="When do you want to book for this service?"
                 android:textColor="#000000"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppinsbold"/>
@@ -109,7 +111,7 @@
                     android:layout_centerVertical="true"
                     android:text="Date"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_alignParentLeft="true"
@@ -130,7 +132,7 @@
                     android:id="@+id/thedate"
                     android:text="(Today) 26 Feb, 2021"
                     android:textColor="@color/colorScroll"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_toLeftOf="@+id/arrownext"
@@ -142,6 +144,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="ShowTimePopup"
                 android:id="@+id/timepicker"
                 android:layout_marginTop="10dp">
                 <TextView
@@ -150,7 +153,7 @@
                     android:layout_centerVertical="true"
                     android:text="Time"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_alignParentLeft="true"
@@ -168,9 +171,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:id="@+id/time_t"
                     android:text="(1hr 10min) 11:20 AM - 12:30 PM"
                     android:textColor="@color/colorScroll"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_toLeftOf="@+id/arrownext"
@@ -194,7 +198,7 @@
                 android:layout_centerVertical="true"
                 android:text="Select Staff"
                 android:textColor="#000000"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsbold"/>
 
@@ -222,7 +226,7 @@
                         android:layout_marginTop="4dp"
                         android:text="Anyone"
                         android:textColor="@color/colorScroll"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textStyle="bold"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/poppinsextralight"/>
@@ -245,7 +249,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginTop="4dp"
                         android:text="Mary"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textStyle="bold"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/poppinsextralight"/>
@@ -268,7 +272,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginTop="4dp"
                         android:text="Jess"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textStyle="bold"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/poppinsextralight"/>
@@ -292,7 +296,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginTop="4dp"
                         android:text="Timo"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textStyle="bold"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/poppinsextralight"/>
@@ -316,7 +320,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginTop="4dp"
                         android:text="Lucy"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:textStyle="bold"
                         android:layout_alignParentLeft="true"
                         android:fontFamily="@font/poppinsextralight"/>
@@ -346,7 +350,7 @@
                     android:layout_centerVertical="true"
                     android:text="Deluxe Manicure"
                     android:textColor="#000000"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_alignParentLeft="true"
@@ -357,7 +361,7 @@
                     android:layout_centerVertical="true"
                     android:text="N 10,000"
                     android:textColor="@color/colorScroll"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_alignParentRight="true"
@@ -377,7 +381,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Leave a note (optional)"
                 android:background="@drawable/all_white"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:fontFamily="@font/poppinslight"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
@@ -389,7 +393,7 @@
                 android:layout_gravity="center"
                 android:text="Add another service"
                 android:textColor="@color/colorScroll"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/poppinslight"/>
@@ -403,9 +407,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/book"
+                android:stateListAnimator="@null"
                 android:text="Book"
                 android:textStyle="bold"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textColor="#ffffff"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppinslight"/>

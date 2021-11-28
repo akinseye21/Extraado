@@ -16,15 +16,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:textSize="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/poppinsregular"
                 android:text="Recently searched"
                 android:textColor="#000000"
-                android:fontFamily="@font/poppinsregular"
-                android:layout_alignParentLeft="true"/>
+                android:textSize="8dp" />
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
@@ -47,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Cuticle removal"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -63,14 +65,14 @@
                             android:text="N1,500"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="30 mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -82,10 +84,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:id="@+id/book"
+                    android:stateListAnimator="@null"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -113,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Gel overlay hands"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -129,14 +132,14 @@
                             android:text="N4,000"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1 hr"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -149,8 +152,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -178,7 +182,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="File and paints"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -194,14 +198,14 @@
                             android:text="N7,000"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="45 mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -214,8 +218,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -244,7 +249,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Deluxe manicure"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -260,14 +265,14 @@
                             android:text="N10,000"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1hr 10mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -280,8 +285,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -309,7 +315,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="IBX Treatment"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -325,14 +331,14 @@
                             android:text="N2,500"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="30 mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -345,8 +351,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -375,7 +382,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Elio Pedicure"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -391,14 +398,14 @@
                             android:text="N3,000"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="33 mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -411,8 +418,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -441,7 +449,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Tropic facial"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -457,14 +465,14 @@
                             android:text="N6,050"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1 hr"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -477,8 +485,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"
@@ -507,7 +516,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:text="Skin care"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -523,14 +532,14 @@
                             android:text="N12,500"
                             android:textColor="#000000"
                             android:textStyle="bold"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1hr 45mins"
                             android:layout_marginLeft="5dp"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:fontFamily="@font/poppinsmedium"/>
 
                     </LinearLayout>
@@ -543,8 +552,9 @@
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:stateListAnimator="@null"
                     android:text="Book"
-                    android:textSize="10dp"
+                    android:textSize="8dp"
                     android:textAllCaps="false"
                     android:fontFamily="@font/poppinslight"
                     android:textColor="@color/colorScroll"

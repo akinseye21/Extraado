@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class TermsOfUse extends AppCompatActivity {
 
     LinearLayout back;
@@ -27,6 +29,7 @@ public class TermsOfUse extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), SignIn.class);
                 startActivity(i);
+                Animatoo.animateSlideRight(TermsOfUse.this);
             }
         });
 
@@ -44,6 +47,7 @@ public class TermsOfUse extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(TermsOfUse.this, Dashboard.class);
                 startActivity(i);
+                Animatoo.animateSplit(TermsOfUse.this);
             }
         });
     }

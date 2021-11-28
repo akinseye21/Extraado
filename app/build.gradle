@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "mobile.extraado.com"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -34,4 +34,5 @@ dependencies {
     //noinspection GradleCompatible
 //    implementation 'com.android.support:design:24.1.1'
     implementation 'com.github.AhmMhd:SeeMoreTextView-Android:1.0.0'  //seemore text
+    implementation 'com.github.mohammadatif:Animatoo:master'  //animation
 }
