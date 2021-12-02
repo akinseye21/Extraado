@@ -4,14 +4,22 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.google.android.material.navigation.NavigationView;
 
 
 /**
@@ -35,6 +43,7 @@ public class FragmentFavorite extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     Spinner mySpinner;
+
 
     public FragmentFavorite() {
         // Required empty public constructor
@@ -72,6 +81,7 @@ public class FragmentFavorite extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_favorite, container, false);
+
 
         mySpinner = v.findViewById(R.id.spinner_menu);
         String[] menu_item = {"All","Nail style", "Hair style"};

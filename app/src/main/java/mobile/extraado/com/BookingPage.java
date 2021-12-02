@@ -20,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class BookingPage extends AppCompatActivity {
 
     TextView theDate, time_t;
@@ -49,7 +51,9 @@ public class BookingPage extends AppCompatActivity {
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(BookingPage.this, BookingPayment.class);
+                startActivity(i);
+                Animatoo.animateSlideRight(BookingPage.this);
             }
         });
 

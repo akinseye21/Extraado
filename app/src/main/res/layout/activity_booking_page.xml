@@ -51,7 +51,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
@@ -387,33 +387,41 @@
                 android:layout_marginRight="10dp"/>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Add another service"
-                android:textColor="@color/colorScroll"
-                android:textSize="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_alignParentRight="true"
-                android:fontFamily="@font/poppinslight"/>
-
-
-            <Button
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@drawable/blue_layout"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:id="@+id/book"
-                android:stateListAnimator="@null"
-                android:text="Book"
-                android:textStyle="bold"
-                android:textSize="8dp"
-                android:textColor="#ffffff"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppinslight"/>
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Add another service"
+                    android:textColor="@color/colorScroll"
+                    android:textSize="8dp"
+                    android:layout_above="@+id/book"
+                    android:fontFamily="@font/poppinslight"/>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/blue_layout"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/book"
+                    android:stateListAnimator="@null"
+                    android:text="Book"
+                    android:textStyle="bold"
+                    android:textSize="8dp"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppinslight"/>
+            </RelativeLayout>
+
+
+
 
 
 

@@ -75,7 +75,7 @@ public class Slides extends AppCompatActivity {
                 next.setVisibility(View.GONE);
                 skip.setVisibility(View.GONE);
                 mDotLayout.setVisibility(View.GONE);
-                info.setVisibility(View.GONE);
+                info.setVisibility(View.VISIBLE);
             }
         });
 
@@ -102,7 +102,7 @@ public class Slides extends AppCompatActivity {
             }
         };
         timer = new Timer();
-        timer.schedule(timerTask, 8000, 8000);
+        timer.schedule(timerTask, 1600, 1600);
 
         addDotIndicator(0);
         mSlideViewPager.addOnPageChangeListener(viewListener);
@@ -114,22 +114,32 @@ public class Slides extends AppCompatActivity {
         mDots = new TextView[3];
         mDotLayout.removeAllViews();
 
+
         for (int i = 0; i<mDots.length; i++){
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml(""));
-            mDots[i].setTextSize(10);
+            mDots[i].setTextSize(7);
 //            mDots[i].setTextColor(getResources().getColor(R.color.colorYellow));
             mDots[i].setBackgroundResource(R.drawable.circle_dot);
             info.setText(words[i]);
 
             mDotLayout.addView(mDots[i]);
+
         }
+
 
         if(mDots.length > 0){
 
 //            mDots[position].setTextColor(getResources().getColor(R.color.colorScroll));
             mDots[position].setBackgroundResource(R.drawable.circle_dot2);
             info.setText(words[position]);
+            if(info.getText().equals(words[2])){
+                getStarted.setVisibility(View.VISIBLE);
+                next.setVisibility(View.GONE);
+                skip.setVisibility(View.GONE);
+                mDotLayout.setVisibility(View.GONE);
+                info.setVisibility(View.VISIBLE);
+            }
 
         }
 

@@ -1,12 +1,14 @@
 package mobile.extraado.com;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -82,7 +84,50 @@ public class CardDetail extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_card_detail, container, false);
 
-        final View topMenu = getActivity().findViewById(R.id.rel1);
+         final TabLayout tabLayout = getActivity().findViewById(R.id.tabLayout);
+
+         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+             @Override
+             public void onTabSelected(TabLayout.Tab tab) {
+
+                 if (tabLayout.getSelectedTabPosition() == 1){
+                     Toast.makeText(getContext(), "Go back first", Toast.LENGTH_SHORT).show();
+//                     // Create new fragment and transaction
+//                     Fragment newFragment = new FragmentFavorite();
+//                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                     // Replace whatever is in the old fragment view with this fragment,
+//                     // and add the transaction to the back stack if needed
+//                     transaction.replace(R.id.framelayout, newFragment);
+//                     transaction.addToBackStack(null);
+//                     // Commit the transaction
+//                     transaction.commit();
+                 }
+
+                 if (tabLayout.getSelectedTabPosition() == 2){
+                     Toast.makeText(getContext(), "Go back first", Toast.LENGTH_SHORT).show();
+//                     // Create new fragment and transaction
+//                     Fragment newFragment = new FragmentBooking();
+//                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                     // Replace whatever is in the old fragment view with this fragment,
+//                     // and add the transaction to the back stack if needed
+//                     transaction.replace(R.id.framelayout, newFragment);
+//                     transaction.addToBackStack(null);
+//                     // Commit the transaction
+//                     transaction.commit();
+                 }
+
+             }
+
+             @Override
+             public void onTabUnselected(TabLayout.Tab tab) {
+
+             }
+
+             @Override
+             public void onTabReselected(TabLayout.Tab tab) {
+
+             }
+         });
 
         viewpager = v.findViewById(R.id.viewpager);
         tab = v.findViewById(R.id.tabLayout);
@@ -90,7 +135,8 @@ public class CardDetail extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getContext(), Dashboard.class);
+                startActivity(i);
             }
         });
 

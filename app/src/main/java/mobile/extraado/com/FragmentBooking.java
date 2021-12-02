@@ -1,19 +1,31 @@
 package mobile.extraado.com;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+
+import com.google.android.material.navigation.NavigationView;
 
 
 /**
@@ -37,7 +49,11 @@ public class FragmentBooking extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     Spinner mySpinner;
-    RelativeLayout pendingBooking;
+    RelativeLayout pendingBooking, completed;
+
+    Dialog myDialog;
+    Button notNow, review;
+
 
     public FragmentBooking() {
         // Required empty public constructor
@@ -75,6 +91,37 @@ public class FragmentBooking extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_booking, container, false);
+
+        myDialog = new Dialog(getContext());
+
+
+        completed = v.findViewById(R.id.completed);
+        completed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.setContentView(R.layout.custom_booking_completed_popup);
+                notNow = myDialog.findViewById(R.id.notnow);
+                review = myDialog.findViewById(R.id.review);
+
+                notNow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        myDialog.dismiss();
+                    }
+                });
+
+                review.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(getContext(), LeaveReview.class);
+                        startActivity(i);
+                    }
+                });
+
+                myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                myDialog.show();
+            }
+        });
 
         pendingBooking = v.findViewById(R.id.pendingBooking);
         pendingBooking.setOnClickListener(new View.OnClickListener() {

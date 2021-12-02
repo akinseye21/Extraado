@@ -1,40 +1,680 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ffffff"
-    tools:context=".FragmentBooking">
-
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/searchrel"
-        android:orientation="horizontal">
-        <AutoCompleteTextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/lay"
-            android:drawableLeft="@drawable/ic_search"
-            android:hint="Search"
-            android:textColorHint="#000000"
-            android:textSize="8dp"
-            android:textColor="#000000"
-            android:fontFamily="@font/poppinslight"
-            android:id="@+id/autocomplete"
-            android:background="@drawable/search_layout"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".FragmentBooking"
+        android:id="@+id/fragmentExp"
+        android:background="#ffffff">
 
-        <Spinner
-            android:layout_width="70dp"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_menu"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/spinner_layout"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/rel1"
+            android:id="@+id/searchrel"
+            android:orientation="horizontal">
+            <AutoCompleteTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/lay"
+                android:drawableLeft="@drawable/ic_search"
+                android:hint="Search"
+                android:textColorHint="#000000"
+                android:textSize="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppinslight"
+                android:id="@+id/autocomplete"
+                android:background="@drawable/search_layout"/>
+
+            <Spinner
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_menu"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spinner_layout"/>
+
+        </RelativeLayout>
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchrel"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Upcoming Bookings (2)"
+                    android:textSize="12dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/pendingBooking"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pending"
+                        android:text="PENDING"
+                        android:textSize="8dp"
+                        android:textColor="#000000"
+                        android:background="@drawable/gray_layout"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending"
+                        android:id="@+id/myRel"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Haircut"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:id="@+id/linDate"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textColor="#000000"
+                                android:textSize="8dp"
+                                android:fontFamily="@font/poppinsregular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="06"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/poppinsregular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="09:00"
+                                android:textColor="#000000"
+                                android:textSize="8dp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/linDate"
+                            android:layout_marginRight="30dp"
+                            android:text="N1,200"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myRel"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barbername"
+                            android:text="Barber 9710"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address"
+                            android:text="96 Asokoro BLVD, Ojota"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:padding="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pending"
+                        android:text="CONFIRMED"
+                        android:textSize="8dp"
+                        android:textColor="#000000"
+                        android:background="@drawable/confirmed_layout"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending"
+                        android:id="@+id/myRel"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deluxe manicure"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:id="@+id/linDate"
+                            android:layout_alignParentRight="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Feb"
+                                android:textColor="#000000"
+                                android:textSize="8dp"
+                                android:fontFamily="@font/poppinsregular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="28"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/poppinsregular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11:20"
+                                android:textColor="#000000"
+                                android:textSize="8dp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/linDate"
+                            android:layout_marginRight="30dp"
+                            android:text="N10,000"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myRel"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barbername"
+                            android:text="Fantasia Place"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address"
+                            android:text="No. 4, Yaba left, Lagos street"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Finished Bookings (3)"
+                    android:textSize="12dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:id="@+id/completed"
+                    android:padding="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pending"
+                        android:text="COMPLETED"
+                        android:textSize="8dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/blue_layout"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending"
+                        android:id="@+id/myRel"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Haircut"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myRel"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/linadd"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barbername"
+                            android:text="Fantasia Place"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address"
+                            android:text="No. 4, Yaba left, Lagos street"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_below="@+id/myRel"
+                        android:id="@+id/linDate"
+                        android:layout_alignParentRight="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jan"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="14"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linadd"
+                        android:text="Book Again"
+                        android:textSize="8dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/book_again_layout"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:padding="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pending"
+                        android:text="CANCELLED"
+                        android:textSize="8dp"
+                        android:textColor="#f12323"
+                        android:background="@drawable/cancelled_layout"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending"
+                        android:id="@+id/myRel"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gents Wash, Pedicure and Manicure"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myRel"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/linadd"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barbername"
+                            android:text="Elegance Barbers"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address"
+                            android:text="No. 4, Yaba left, Lagos street"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_below="@+id/myRel"
+                        android:id="@+id/linDate"
+                        android:layout_alignParentRight="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jan"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linadd"
+                        android:text="Book Again"
+                        android:textSize="8dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/book_again_layout2"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pending"
+                        android:text="CANCELLED"
+                        android:textSize="8dp"
+                        android:textColor="#f12323"
+                        android:background="@drawable/cancelled_layout"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending"
+                        android:id="@+id/myRel"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gents Wash, Pedicure and Manicure"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myRel"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/linadd"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barbername"
+                            android:text="Elegance Barbers"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/address"
+                            android:text="No. 4, Yaba left, Lagos street"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_below="@+id/myRel"
+                        android:id="@+id/linDate"
+                        android:layout_alignParentRight="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jan"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00"
+                            android:textColor="#000000"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linadd"
+                        android:text="Book Again"
+                        android:textSize="8dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/book_again_layout2"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="@font/poppinslight"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
 
     </RelativeLayout>
 
@@ -42,640 +682,4 @@
 
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/searchrel"
-        android:layout_marginBottom="70dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:text="Upcoming Bookings (2)"
-            android:textSize="12dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/poppinsregular"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/pendingBooking"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:background="@drawable/gray_layout_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pending"
-                android:text="PENDING"
-                android:textSize="8dp"
-                android:textColor="#000000"
-                android:background="@drawable/gray_layout"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pending"
-                android:id="@+id/myRel"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Haircut"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:id="@+id/linDate"
-                    android:layout_alignParentRight="true">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Today"
-                        android:textColor="#000000"
-                        android:textSize="8dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="06"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:textSize="12dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="09:00"
-                        android:textColor="#000000"
-                        android:textSize="8dp"
-                        android:fontFamily="@font/poppinsregular"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/linDate"
-                    android:layout_marginRight="30dp"
-                    android:text="N1,200"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/myRel"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/barbername"
-                    android:text="Barber 9710"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/address"
-                    android:text="96 Asokoro BLVD, Ojota"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"
-            android:background="@drawable/gray_layout_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pending"
-                android:text="CONFIRMED"
-                android:textSize="8dp"
-                android:textColor="#000000"
-                android:background="@drawable/confirmed_layout"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pending"
-                android:id="@+id/myRel"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Deluxe manicure"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:id="@+id/linDate"
-                    android:layout_alignParentRight="true">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Feb"
-                        android:textColor="#000000"
-                        android:textSize="8dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="28"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:textSize="12dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="11:20"
-                        android:textColor="#000000"
-                        android:textSize="8dp"
-                        android:fontFamily="@font/poppinsregular"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/linDate"
-                    android:layout_marginRight="30dp"
-                    android:text="N10,000"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/myRel"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/barbername"
-                    android:text="Fantasia Place"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/address"
-                    android:text="No. 4, Yaba left, Lagos street"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Finished Bookings (3)"
-            android:textSize="12dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/poppinsregular"/>
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:background="@drawable/gray_layout_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pending"
-                android:text="COMPLETED"
-                android:textSize="8dp"
-                android:textColor="#ffffff"
-                android:background="@drawable/blue_layout"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pending"
-                android:id="@+id/myRel"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Haircut"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/myRel"
-                android:layout_marginTop="20dp"
-                android:id="@+id/linadd"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/barbername"
-                    android:text="Fantasia Place"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/address"
-                    android:text="No. 4, Yaba left, Lagos street"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_below="@+id/myRel"
-                android:id="@+id/linDate"
-                android:layout_alignParentRight="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jan"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="14"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:textSize="12dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="08:00"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linadd"
-                android:text="Book Again"
-                android:textSize="8dp"
-                android:textColor="#ffffff"
-                android:background="@drawable/book_again_layout"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-
-
-        </RelativeLayout>
-
-
-
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"
-            android:background="@drawable/gray_layout_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pending"
-                android:text="CANCELLED"
-                android:textSize="8dp"
-                android:textColor="#f12323"
-                android:background="@drawable/cancelled_layout"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pending"
-                android:id="@+id/myRel"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gents Wash, Pedicure and Manicure"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/myRel"
-                android:layout_marginTop="20dp"
-                android:id="@+id/linadd"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/barbername"
-                    android:text="Elegance Barbers"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/address"
-                    android:text="No. 4, Yaba left, Lagos street"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_below="@+id/myRel"
-                android:id="@+id/linDate"
-                android:layout_alignParentRight="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jan"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="09"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:textSize="12dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="08:00"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linadd"
-                android:text="Book Again"
-                android:textSize="8dp"
-                android:textColor="#ffffff"
-                android:background="@drawable/book_again_layout2"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-        </RelativeLayout>
-
-
-
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:padding="20dp"
-            android:background="@drawable/gray_layout_light">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pending"
-                android:text="CANCELLED"
-                android:textSize="8dp"
-                android:textColor="#f12323"
-                android:background="@drawable/cancelled_layout"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pending"
-                android:id="@+id/myRel"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gents Wash, Pedicure and Manicure"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsbold"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/myRel"
-                android:layout_marginTop="20dp"
-                android:id="@+id/linadd"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/barbername"
-                    android:text="Elegance Barbers"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/address"
-                    android:text="No. 4, Yaba left, Lagos street"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_below="@+id/myRel"
-                android:id="@+id/linDate"
-                android:layout_alignParentRight="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jan"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="09"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:textSize="12dp"
-                    android:fontFamily="@font/poppinsregular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="08:00"
-                    android:textColor="#000000"
-                    android:textSize="8dp"
-                    android:fontFamily="@font/poppinsregular"/>
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linadd"
-                android:text="Book Again"
-                android:textSize="8dp"
-                android:textColor="#ffffff"
-                android:background="@drawable/book_again_layout2"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:fontFamily="@font/poppinslight"/>
-
-        </RelativeLayout>
-
-
-
-
-
-
-
-    </LinearLayout>
-
-    </ScrollView>
-
-
-
-
-</RelativeLayout>

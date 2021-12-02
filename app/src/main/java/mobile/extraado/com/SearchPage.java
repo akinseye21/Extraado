@@ -1,6 +1,7 @@
 package mobile.extraado.com;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -80,15 +81,19 @@ public class SearchPage extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create new fragment and transaction
-                Fragment newFragment = new FragmentExplore();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                // Replace whatever is in the old fragment view with this fragment,
-                // and add the transaction to the back stack if needed
-                transaction.replace(R.id.framelayout, newFragment);
-                transaction.addToBackStack(null);
-                // Commit the transaction
-                transaction.commit();
+                Intent i = new Intent(getContext(), Dashboard.class);
+                startActivity(i);
+
+//                // Create new fragment and transaction
+//                Dashboard dashboard = new Dashboard();
+//                Fragment newFragment = new FragmentExplore();
+//                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                // Replace whatever is in the old fragment view with this fragment,
+//                // and add the transaction to the back stack if needed
+//                transaction.replace(R.id.framelayout, newFragment);
+//                transaction.addToBackStack(null);
+//                // Commit the transaction
+//                transaction.commit();
             }
         });
 

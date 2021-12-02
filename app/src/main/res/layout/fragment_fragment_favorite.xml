@@ -1,455 +1,465 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ffffff"
-    tools:context=".FragmentFavorite">
-
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/searchrel"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Favourite Venues (3)"
-            android:textSize="15dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/poppinsregular"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".FragmentFavorite"
+        android:id="@+id/fragmentExp"
+        android:background="#ffffff">
 
-        <Spinner
-            android:layout_width="80dp"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_menu"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/spinner_layout"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/rel1"
+            android:id="@+id/searchrel"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favourite Venues (3)"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <Spinner
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_menu"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spinner_layout"/>
+        </RelativeLayout>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchrel"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/gray_layout_light">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:srcCompat="@drawable/baber"
+                        android:id="@+id/shapedImage"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open (Closes at 10pm)"
+                            android:background="@drawable/plain_white_layout"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinslight"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_favorite_white"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/relPlace"
+                        android:layout_below="@+id/shapedImage">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fantasia Place"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsbold"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_star"
+                            android:id="@+id/star"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/star"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rating"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(24)"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/rating"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/relPlace"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yaba Left, Lagos Street"
+                            android:drawableLeft="@drawable/ic_pin"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N700"
+                            android:id="@+id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="8dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/price"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/poppinsregular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
     </RelativeLayout>
 
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/searchrel"
-        android:layout_marginBottom="70dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical"
-                android:background="@drawable/gray_layout_light">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_height="120dp"
-                    android:layout_width="match_parent"
-                    app:shapeAppearanceOverlay="@style/roundedImageView"
-                    app:srcCompat="@drawable/baber"
-                    android:id="@+id/shapedImage"
-                    android:layout_margin="10dp"
-                    android:scaleType="centerCrop"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Open (Closes at 10pm)"
-                        android:background="@drawable/plain_white_layout"
-                        android:layout_alignParentLeft="true"
-                        android:textSize="10dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinslight"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="3dp"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_favorite_white"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/relPlace"
-                    android:layout_below="@+id/shapedImage">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fantasia Place"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsbold"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_star"
-                        android:id="@+id/star"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.5"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/star"
-                        android:layout_marginRight="10dp"
-                        android:id="@+id/rating"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="(24)"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/rating"
-                        android:textSize="12dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/relPlace"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yaba Left, Lagos Street"
-                        android:drawableLeft="@drawable/ic_pin"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="N700"
-                        android:id="@+id/price"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="from"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/price"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-            </RelativeLayout>
 
 
 
-
-
-
-
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/gray_layout_light">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_height="120dp"
-                    android:layout_width="match_parent"
-                    app:shapeAppearanceOverlay="@style/roundedImageView"
-                    app:srcCompat="@drawable/baber"
-                    android:id="@+id/shapedImage"
-                    android:layout_margin="10dp"
-                    android:scaleType="centerCrop"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Open (Closes at 10pm)"
-                        android:background="@drawable/plain_white_layout"
-                        android:layout_alignParentLeft="true"
-                        android:textSize="10dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinslight"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="3dp"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_favorite_white"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/relPlace"
-                    android:layout_below="@+id/shapedImage">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fantasia Place"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsbold"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_star"
-                        android:id="@+id/star"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.5"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/star"
-                        android:layout_marginRight="10dp"
-                        android:id="@+id/rating"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="(24)"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/rating"
-                        android:textSize="12dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/relPlace"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yaba Left, Lagos Street"
-                        android:drawableLeft="@drawable/ic_pin"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="N700"
-                        android:id="@+id/price"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="from"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/price"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/gray_layout_light">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_height="120dp"
-                    android:layout_width="match_parent"
-                    app:shapeAppearanceOverlay="@style/roundedImageView"
-                    app:srcCompat="@drawable/baber"
-                    android:id="@+id/shapedImage"
-                    android:layout_margin="10dp"
-                    android:scaleType="centerCrop"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Open (Closes at 10pm)"
-                        android:background="@drawable/plain_white_layout"
-                        android:layout_alignParentLeft="true"
-                        android:textSize="10dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinslight"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="3dp"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_favorite_white"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/relPlace"
-                    android:layout_below="@+id/shapedImage">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fantasia Place"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsbold"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_star"
-                        android:id="@+id/star"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.5"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/star"
-                        android:layout_marginRight="10dp"
-                        android:id="@+id/rating"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="(24)"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/rating"
-                        android:textSize="12dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/relPlace"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yaba Left, Lagos Street"
-                        android:drawableLeft="@drawable/ic_pin"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="N700"
-                        android:id="@+id/price"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:textSize="12dp"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/poppinsregular"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="from"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/price"
-                        android:textSize="10dp"
-                        android:fontFamily="@font/poppinsregular"/>
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-
-    </ScrollView>
-
-
-
-</RelativeLayout>

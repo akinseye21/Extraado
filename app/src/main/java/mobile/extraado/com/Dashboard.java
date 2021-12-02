@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -36,14 +38,16 @@ public class Dashboard extends AppCompatActivity implements
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-
     ImageView openMenu;
+
+
 
 
     private TabLayout tab;
     private ViewPager viewpager;
     ViewPagerAdapter viewPagerAdapter;
     private int[] tabIcons = { R.drawable.ic_search, R.drawable.ic_favorite, R.drawable.ic_booking};
+    Button signout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,26 +74,35 @@ public class Dashboard extends AppCompatActivity implements
                 int id = item.getItemId();
 
                 if(id == R.id.profile){
-                    Toast.makeText(Dashboard.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Profile Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.reviews){
-                    Toast.makeText(Dashboard.this, "Reviews Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Reviews Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.payments){
-                    Toast.makeText(Dashboard.this, "Payments Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Payments Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.notifications){
-                    Toast.makeText(Dashboard.this, "Notifications Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Notifications Selected", Toast.LENGTH_SHORT).show();
                 }
                else  if(id == R.id.settings){
-                    Toast.makeText(Dashboard.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Settings Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.privacy){
-                    Toast.makeText(Dashboard.this, "Privacy Selected", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Dashboard.this, "Privacy Selected", Toast.LENGTH_SHORT).show();
                 }
 
 
                 return true;
+            }
+        });
+
+        signout = findViewById(R.id.signout);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), SignIn.class);
+                startActivity(i);
             }
         });
 
@@ -100,6 +113,8 @@ public class Dashboard extends AppCompatActivity implements
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
+
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(viewPagerAdapter);

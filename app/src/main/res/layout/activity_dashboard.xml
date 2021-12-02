@@ -11,39 +11,54 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/rel1"
-            android:layout_margin="20dp"
-            android:layout_alignParentTop="true">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:id="@+id/open_nav"
-                android:layout_centerVertical="true"
-                android:src="@drawable/menu"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/logobackground"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"/>
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabLayout"
+            android:id="@+id/dashboardFrame">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rel1"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentTop="true">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/open_nav"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/menu"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logobackground"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
 
 
 
-        <androidx.viewpager.widget.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="700dp"
-            android:id="@+id/viewpager"
-            android:layout_below="@+id/rel1">
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                    android:layout_below="@+id/rel1"
+                    android:id="@+id/viewpager">
 
-        </androidx.viewpager.widget.ViewPager>
+                </androidx.viewpager.widget.ViewPager>
+            </RelativeLayout>
 
 
 
+
+
+        </FrameLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -53,6 +68,7 @@
             app:tabMode="fixed"
             app:tabSelectedTextColor="#017691"
             app:tabTextAppearance="@style/tab_text"/>
+
     </RelativeLayout>
 
 
@@ -75,6 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#efefef"
+                android:id="@+id/signout"
                 android:stateListAnimator="@null"
                 android:textAllCaps="false"
                 android:text="Sign out"

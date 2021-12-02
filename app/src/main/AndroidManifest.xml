@@ -14,11 +14,17 @@
         android:roundIcon="@drawable/logobackground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ReviewCompleted"></activity>
+        <activity android:name=".LeaveReview" />
+        <activity android:name=".YourLocation" />
+        <activity android:name=".BookingSuccess" />
+        <activity android:name=".BookingPayment" />
         <activity android:name=".BookingPage" />
         <activity android:name=".ResetSuccess" />
         <activity android:name=".ResetPasswordVerification" />
-        <activity android:name=".ResetPassword2"
-            android:noHistory="false"/>
+        <activity
+            android:name=".ResetPassword2"
+            android:noHistory="false" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".BookingPending" />
         <activity android:name=".Dashboard" />

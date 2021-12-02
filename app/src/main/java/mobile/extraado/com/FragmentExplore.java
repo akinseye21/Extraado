@@ -7,13 +7,18 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
@@ -24,6 +29,8 @@ import android.widget.ScrollView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 
 /**
@@ -95,6 +102,7 @@ public class FragmentExplore extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_explore, container, false);
+
 
         all = v.findViewById(R.id.all);
         alltext = v.findViewById(R.id.alltext);
@@ -295,7 +303,7 @@ public class FragmentExplore extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 // Replace whatever is in the old fragment view with this fragment,
                 // and add the transaction to the back stack if needed
-                transaction.replace(R.id.fragmentExp, newFragment);
+                transaction.replace(R.id.dashboardFrame, newFragment);
                 transaction.addToBackStack(null);
                 // Commit the transaction
                 transaction.commit();
@@ -322,7 +330,7 @@ public class FragmentExplore extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 // Replace whatever is in the old fragment view with this fragment,
                 // and add the transaction to the back stack if needed
-                transaction.replace(R.id.fragmentExp, newFragment);
+                transaction.replace(R.id.dashboardFrame, newFragment);
                 transaction.addToBackStack(null);
                 // Commit the transaction
                 transaction.commit();
