@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -75,6 +76,9 @@ public class Dashboard extends AppCompatActivity implements
 
                 if(id == R.id.profile){
 //                    Toast.makeText(Dashboard.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Dashboard.this, ProfilePage.class);
+                    startActivity(i);
+                    Animatoo.animateZoom(Dashboard.this);
                 }
                 else if(id == R.id.reviews){
 //                    Toast.makeText(Dashboard.this, "Reviews Selected", Toast.LENGTH_SHORT).show();
@@ -84,9 +88,15 @@ public class Dashboard extends AppCompatActivity implements
                 }
                 else if(id == R.id.notifications){
 //                    Toast.makeText(Dashboard.this, "Notifications Selected", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Dashboard.this, NotificationPage.class);
+                    startActivity(i);
+                    Animatoo.animateZoom(Dashboard.this);
                 }
                else  if(id == R.id.settings){
 //                    Toast.makeText(Dashboard.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Dashboard.this, SettingsPage.class);
+                    startActivity(i);
+                    Animatoo.animateZoom(Dashboard.this);
                 }
                 else if(id == R.id.privacy){
 //                    Toast.makeText(Dashboard.this, "Privacy Selected", Toast.LENGTH_SHORT).show();

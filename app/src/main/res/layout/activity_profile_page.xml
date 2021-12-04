@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="20dp"
+    tools:context=".ProfilePage">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/close"
+        android:layout_marginBottom="10dp"
+        android:stateListAnimator="@null"
+        android:background="@drawable/plain_white_layout"
+        android:text="X"
+        android:textSize="10dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            android:id="@+id/cardClick1"
+            android:background="@drawable/gray_layout_light">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_height="120dp"
+                android:layout_width="match_parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/baber"
+                android:id="@+id/shapedImage"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open (Closes at 10pm)"
+                    android:background="@drawable/plain_white_layout"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_favorite_white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/relPlace"
+                android:layout_below="@+id/shapedImage">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fantasia Place"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinsbold"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star"
+                    android:id="@+id/star"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/star"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="4.5"
+                    android:textColor="#000000"
+                    android:textSize="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(24)"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rating"
+                    android:textSize="8dp"
+                    android:fontFamily="@font/poppinsregular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/relPlace"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yaba Left, Lagos Street"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_pin"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="8dp"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N700"
+                    android:id="@+id/price"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="from"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/price"
+                    android:textSize="8dp"
+                    android:fontFamily="@font/poppinsregular"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardClick1"
+            android:layout_above="@+id/save"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="vertical"
+            android:scrollIndicators="left">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="text"
+                    android:hint="James Maddison"
+                    android:textSize="8dp"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/edittext_layout"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="jamesmadda@leicestercity.co.uk"
+                    android:textSize="8dp"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/edittext_layout"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="08011223344"
+                    android:textSize="8dp"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/edittext_layout"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="No. 9, Ajayi Street, Mende, Maryland"
+                    android:textSize="8dp"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppinslight"
+                    android:background="@drawable/edittext_layout"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Change password"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/colorScroll"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service preference"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_layout2"
+                        android:layout_margin="5dp"
+                        android:layout_alignParentLeft="true"
+                        android:stateListAnimator="@null"
+                        android:text="Unisex"
+                        android:textSize="8dp"
+                        android:textColor="#ffffff"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppinslight"/>
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_layout3"
+                        android:layout_margin="5dp"
+                        android:layout_centerInParent="true"
+                        android:stateListAnimator="@null"
+                        android:text="Female"
+                        android:textSize="8dp"
+                        android:textColor="#000000"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppinslight"/>
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_layout3"
+                        android:layout_margin="5dp"
+                        android:layout_alignParentRight="true"
+                        android:stateListAnimator="@null"
+                        android:text="Male"
+                        android:textSize="8dp"
+                        android:textColor="#000000"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppinslight"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_layout"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/save"
+            android:stateListAnimator="@null"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textSize="8dp"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinslight"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

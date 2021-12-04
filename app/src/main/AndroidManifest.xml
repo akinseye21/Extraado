@@ -14,7 +14,10 @@
         android:roundIcon="@drawable/logobackground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReviewCompleted"></activity>
+        <activity android:name=".SettingsPage"></activity>
+        <activity android:name=".NotificationPage" />
+        <activity android:name=".ProfilePage" />
+        <activity android:name=".ReviewCompleted" />
         <activity android:name=".LeaveReview" />
         <activity android:name=".YourLocation" />
         <activity android:name=".BookingSuccess" />
